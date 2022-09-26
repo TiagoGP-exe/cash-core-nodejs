@@ -1,10 +1,11 @@
 const pg = require("pg");
+require("dotenv").config();
 
 const config = {
-  user: "postgres", //this is the db user credential
-  database: "cashcore",
-  password: "postgres",
-  port: 5432,
+  user: process.env.PGUSER, //this is the db user credential
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
   max: 10, // max number of clients in the pool
   idleTimeoutMillis: 30000,
 };
