@@ -1,0 +1,23 @@
+{
+  "name": "cash-core",
+  "version": "1.0.0",
+  "description": "Api for cash core",
+  "main": "app.js",
+  "author": "Tiago Guimarães Pinto",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "create": "node ./services/db createTables"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "make-runnable": "^1.3.10",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
