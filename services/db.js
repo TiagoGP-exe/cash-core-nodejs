@@ -1,4 +1,5 @@
 const pg = require("pg");
+
 require("dotenv").config();
 
 const config = {
@@ -17,8 +18,7 @@ pool.on("connect", () => {
 });
 
 const createTables = () => {
-  const schoolTable = `
-
+  const databaseTables = `
       CREATE TABLE IF NOT EXISTS empresa (
         cnpj char(14) NOT NULL,
         razao_social VARCHAR(60),
@@ -93,7 +93,7 @@ const createTables = () => {
       
       `;
   pool
-    .query(schoolTable)
+    .query(databaseTables)
     .then((res) => {
       console.log(res);
       pool.end();
